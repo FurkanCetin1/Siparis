@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSiparisVeren = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSiparisDetayi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -62,13 +62,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Sipariş Detayı";
             // 
-            // textBox1
+            // txtSiparisDetayi
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 38);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 112);
-            this.textBox1.TabIndex = 3;
+            this.txtSiparisDetayi.Location = new System.Drawing.Point(88, 38);
+            this.txtSiparisDetayi.Multiline = true;
+            this.txtSiparisDetayi.Name = "txtSiparisDetayi";
+            this.txtSiparisDetayi.Size = new System.Drawing.Size(196, 112);
+            this.txtSiparisDetayi.TabIndex = 3;
             // 
             // label3
             // 
@@ -79,12 +79,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Tarih";
             // 
-            // dateTimePicker1
+            // dtpTarih
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(88, 157);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpTarih.Location = new System.Drawing.Point(88, 157);
+            this.dtpTarih.Name = "dtpTarih";
+            this.dtpTarih.Size = new System.Drawing.Size(200, 20);
+            this.dtpTarih.TabIndex = 5;
             // 
             // btnKaydet
             // 
@@ -94,6 +94,7 @@
             this.btnKaydet.TabIndex = 6;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // frmYeniSiparis
             // 
@@ -101,9 +102,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 251);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpTarih);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSiparisDetayi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSiparisVeren);
             this.Controls.Add(this.label1);
@@ -119,9 +120,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSiparisVeren;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSiparisDetayi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpTarih;
         private System.Windows.Forms.Button btnKaydet;
     }
 }
