@@ -61,14 +61,14 @@
             // tümSiparişlerToolStripMenuItem
             // 
             this.tümSiparişlerToolStripMenuItem.Name = "tümSiparişlerToolStripMenuItem";
-            this.tümSiparişlerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tümSiparişlerToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.tümSiparişlerToolStripMenuItem.Text = "Tüm Siparişler";
             this.tümSiparişlerToolStripMenuItem.Click += new System.EventHandler(this.tümSiparişlerToolStripMenuItem_Click);
             // 
             // yeniSiparişToolStripMenuItem
             // 
             this.yeniSiparişToolStripMenuItem.Name = "yeniSiparişToolStripMenuItem";
-            this.yeniSiparişToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yeniSiparişToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.yeniSiparişToolStripMenuItem.Text = "Yeni Sipariş";
             this.yeniSiparişToolStripMenuItem.Click += new System.EventHandler(this.yeniSiparişToolStripMenuItem_Click);
             // 
@@ -84,14 +84,16 @@
             // tümÜrünlerToolStripMenuItem
             // 
             this.tümÜrünlerToolStripMenuItem.Name = "tümÜrünlerToolStripMenuItem";
-            this.tümÜrünlerToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.tümÜrünlerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tümÜrünlerToolStripMenuItem.Text = "Tüm Ürünler";
+            this.tümÜrünlerToolStripMenuItem.Click += new System.EventHandler(this.tümÜrünlerToolStripMenuItem_Click);
             // 
             // yeniÜrünToolStripMenuItem
             // 
             this.yeniÜrünToolStripMenuItem.Name = "yeniÜrünToolStripMenuItem";
-            this.yeniÜrünToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.yeniÜrünToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.yeniÜrünToolStripMenuItem.Text = "Yeni Ürün";
+            this.yeniÜrünToolStripMenuItem.Click += new System.EventHandler(this.yeniÜrünToolStripMenuItem_Click);
             // 
             // Form1
             // 

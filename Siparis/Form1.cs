@@ -36,5 +36,25 @@ namespace Siparis
             }
             yeniSiparisFormu.Show();
         }
+        public frmUrunler urunlerFormu;
+        private void tümÜrünlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (urunlerFormu == null || urunlerFormu.IsDisposed)
+            {
+                urunlerFormu = new frmUrunler();
+                urunlerFormu.MdiParent = this;
+            }
+            urunlerFormu.Show();
+        }
+        public frmYeniUrun yeniUrunFormu;
+        private void yeniÜrünToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (yeniUrunFormu == null || yeniUrunFormu.IsDisposed)
+            {
+                yeniUrunFormu = new frmYeniUrun();
+                yeniUrunFormu.MdiParent = this;
+            }
+            yeniUrunFormu.Show();
+        }
     }
 }
