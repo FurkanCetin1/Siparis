@@ -16,5 +16,25 @@ namespace Siparis
         {
             InitializeComponent();
         }
+        public frmSiparisler siparislerFormu;
+        private void tümSiparişlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (siparislerFormu == null || siparislerFormu.IsDisposed)
+            {
+                siparislerFormu = new frmSiparisler();
+                siparislerFormu.MdiParent = this;
+            }
+            siparislerFormu.Show();
+        }
+        public frmYeniSiparis yeniSiparisFormu;
+        private void yeniSiparişToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (yeniSiparisFormu == null || yeniSiparisFormu.IsDisposed)
+            {
+                yeniSiparisFormu = new frmYeniSiparis();
+                yeniSiparisFormu.MdiParent = this;
+            }
+            yeniSiparisFormu.Show();
+        }
     }
 }
