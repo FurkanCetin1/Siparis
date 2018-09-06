@@ -18,12 +18,44 @@ namespace Siparis
         {
             InitializeComponent();
         }
-
+        public int Id = 0;
+        public frmYeniUrun(int id)
+        {
+            InitializeComponent();
+            Id = id;
+            LoadData();
+        }
+        private void LoadData()
+        {
+            if (Id > 0)
+            {
+                var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Siparis.Properties.Settings.SiparislerDbConnectionString"].ConnectionString);
+                var command = new SqlCommand("SELECT * FROM Urunler WHERE Id = @Id", connection);
+                command.Parameters.AddWithValue("@Id", this.Id);
+                var dataAdapter = new SqlDataAdapter(command);
+                DataTable resultTable = new DataTable();
+                dataAdapter.Fill(resultTable);
+                if (resultTable.Rows.Count > 0) { 
+                    this.txtUrunAdi.Text = resultTable.Rows[0]["Ad"].ToString();
+                    this.txtAciklama.Text = resultTable.Rows[0]["Aciklama"].ToString();
+                    this.txtFiyat.Text = resultTable.Rows[0]["Fiyat"].ToString();
+                }
+            }
+        }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             // ADO.NET ile veritabanına kaydetme işlemi
             var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Siparis.Properties.Settings.SiparislerDbConnectionString"].ConnectionString);
-            var command = new SqlCommand("INSERT INTO Urunler (Ad, Aciklama, Fiyat) VALUES (@Ad, @Aciklama, @Fiyat)", connection);
+            SqlCommand command;
+            if (Id > 0)
+            {
+                command = new SqlCommand("UPDATE Urunler SET Ad = @Ad, Aciklama = @Aciklama, Fiyat = @Fiyat WHERE Id = @Id", connection);
+                command.Parameters.AddWithValue("@Id", this.Id);
+            } else
+            {
+                command = new SqlCommand("INSERT INTO Urunler (Ad, Aciklama, Fiyat) VALUES (@Ad, @Aciklama, @Fiyat)", connection);
+            }
+                
 
             command.Parameters.AddWithValue("@Ad", this.txtUrunAdi.Text);
             command.Parameters.AddWithValue("@Aciklama", this.txtAciklama.Text);
